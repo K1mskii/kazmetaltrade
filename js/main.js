@@ -18,9 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
-        navigationTooltips: ['Главная', 'О компании', 'Как заказать'],
+        navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата'],
         showActiveTooltip: true,
         dragAndMove: true,
-        anchors:['hero', 'about', 'order'],
+        anchors:['hero', 'about', 'order', 'payment'],
     })
 });
+

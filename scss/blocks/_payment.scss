@@ -1,0 +1,34 @@
+.payment {
+    position: relative;
+    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+    width: 100%;
+    height: 100vh;
+}
+.payment__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.payment__block {
+    width: 50%;
+}
+.payment__subtitle {
+    margin: 20px 0;
+    font-size: 17px;
+}
+.payment__item {
+    @include m-bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    list-style: disc;
+}
+.payment__desc {
+    margin-top: 5px;
+    @include m-light;
+    font-size: 15px;
+}
+#particles-js {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

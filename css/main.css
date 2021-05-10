@@ -167,6 +167,15 @@ button {
   width: 100%;
 }
 
+.title {
+  font-family: 'MullerBold';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+
 @media only screen and (max-width: 1300px) {
   .container {
     max-width: 1200px;
@@ -1979,14 +1988,6 @@ body._lock {
   line-height: 100%;
 }
 
-.about__title {
-  font-family: 'MullerBold';
-  font-weight: 700;
-  font-style: normal;
-  font-size: 60px;
-  line-height: 100%;
-}
-
 .about__subtitle {
   margin-top: 25px;
   font-family: 'MullerLight';
@@ -2084,15 +2085,6 @@ body._lock {
           align-items: center;
 }
 
-.order__title {
-  font-family: 'MullerBold';
-  font-weight: 700;
-  font-style: normal;
-  font-size: 60px;
-  line-height: 100%;
-  letter-spacing: 0.05em;
-}
-
 .order__city {
   margin-top: 35px;
 }
@@ -2152,6 +2144,54 @@ body._lock {
   transition: opacity .2s ease;
   opacity: .6;
   cursor: pointer;
+}
+
+.payment {
+  position: relative;
+  background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+  width: 100%;
+  height: 100vh;
+}
+
+.payment__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.payment__block {
+  width: 50%;
+}
+
+.payment__subtitle {
+  margin: 20px 0;
+  font-size: 17px;
+}
+
+.payment__item {
+  font-family: 'MullerBold';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.payment__desc {
+  margin-top: 5px;
+  font-family: 'MullerLight';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .footer {

@@ -15,12 +15,6 @@
     justify-content: space-between;
     align-items: center
 }
-.order__title {
-    @include m-bold;
-    font-size: 60px;
-    line-height: 100%;
-    letter-spacing: 0.05em;
-}
 .order__city {
     margin-top: 35px;
 }

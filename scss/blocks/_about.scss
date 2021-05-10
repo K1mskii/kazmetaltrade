@@ -20,11 +20,6 @@
     font-size: 36px;
     line-height: 100%;
 }
-.about__title {
-    @include m-bold;
-    font-size: 60px;
-    line-height: 100%;
-}
 .about__subtitle {
     margin-top: 25px;
     @include m-light;

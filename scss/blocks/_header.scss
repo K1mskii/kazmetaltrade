@@ -27,8 +27,8 @@ body._lock {
 .menu__icon {
     display: none;
 }
-.menu__list > .menu__item {
-    margin: 0 40px 0 0px;
+.menu__list > .menu__item:not(:last-child) {
+    margin-right: 40px;
     position: relative;
 }
 .menu__link {
@@ -38,6 +38,9 @@ body._lock {
     font-size: 16px;
     line-height: 20px;
     display: inline-block;
+    &:hover {
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    }
 }
 .header__menu .menu__icon {
     background: none;
@@ -181,9 +184,6 @@ body._lock {
     .header__item span {
         display: none;
     }
-    .header__btn {
-        margin-left: 0;
-    }
     .header__item:first-child {
         margin-right: 0;
     }
@@ -195,12 +195,6 @@ body._lock {
     }
     .menu__nav::before {
         padding: 40px 0;
-    }
-    .header__btn {
-        display: none;
-    }
-    .header__logo {
-        margin-left: 20px;
     }
 }
 

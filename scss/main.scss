@@ -3,9 +3,12 @@
 @import 'rules/globals';
 @import 'rules/vars';
 
-
+@import '../libs/fullpage/fullpage.min';
+@import '../libs/aos/aos';
 
 @import 'blocks/header';
 @import 'blocks/slider-section';
 @import 'blocks/hero';
+@import 'blocks/about';
+@import 'blocks/order';
 @import 'blocks/footer';

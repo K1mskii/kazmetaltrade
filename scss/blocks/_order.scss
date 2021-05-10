@@ -1,0 +1,72 @@
+.order {
+    position: relative;
+    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+    width: 100%;
+    height: 100vh;
+}
+.order__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.order__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.order__title {
+    @include m-bold;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+}
+.order__city {
+    margin-top: 35px;
+}
+.order__name {
+    @include m-medium;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    
+}
+.order__lists {
+    margin-top: 35px;
+    margin-left: 20px;
+}
+.order__item {
+    margin-bottom: 20px;
+    list-style: disc;
+    @include m-light;
+    font-size: 20px;
+    line-height: 24px;
+}
+.order__item a {
+    border-bottom: 1px solid $white;
+}
+
+// Map
+.order__map {
+    position: relative;
+}
+.order__img {
+    width: 100%;
+    height: 100%;
+}
+.order__svg {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.order__part {
+    opacity: .4;
+}
+.order__part:hover {
+    transition: opacity .2s ease;
+    opacity: .6;
+    cursor: pointer;
+}

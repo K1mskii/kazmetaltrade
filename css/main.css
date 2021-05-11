@@ -2532,6 +2532,203 @@ body._lock {
   cursor: pointer;
 }
 
+.testimonials {
+  position: relative;
+  background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+  width: 100%;
+  height: 100vh;
+}
+
+.testimonials__wrapper {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__btn {
+  padding: 15px 30px;
+  font-family: 'MullerLight';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  color: #ffffff;
+  background: #232323;
+  border-radius: 5px;
+  background-color: #232323;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.testimonials__btn:hover {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.testimonials__items {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.testimonials__item {
+  padding: 30px;
+  background: #232323;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__img {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.testimonials__text {
+  margin-left: 15px;
+}
+
+.testimonials__name {
+  font-family: 'MullerBold';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+.testimonials__date {
+  margin-top: 5px;
+  font-family: 'MullerLight';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 13px;
+}
+
+.testimonials__desc {
+  margin-top: 30px;
+  font-family: 'MullerUltraLight';
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: .5px;
+}
+
+.contacts {
+  position: relative;
+  background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
+  width: 100%;
+  height: 100vh;
+}
+
+.contacts__wrapper {
+  position: relative;
+  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__block {
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
+.contacts__name {
+  margin-bottom: 5px;
+  color: #ffffff;
+  opacity: .5;
+}
+
+.contacts__desc {
+  font-family: 'MullerLight';
+  font-weight: 300;
+  font-style: normal;
+}
+
+.contacts__link {
+  text-decoration: underline;
+}
+
+.contacts__link:hover {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.contacts__link:not(:last-child) {
+  margin-right: 15px;
+}
+
+.location {
+  background: url(../img/icons/location.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.phone {
+  background: url(../img/icons/record.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.email {
+  background: url(../img/icons/email.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
 .footer {
   position: absolute;
   bottom: 50px;
@@ -2559,5 +2756,10 @@ body._lock {
 .footer__icon {
   width: 35px;
   height: 35px;
+}
+
+.footer__icon:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 /*# sourceMappingURL=main.css.map */

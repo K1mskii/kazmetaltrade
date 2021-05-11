@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
-        navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата', 'Прайс'],
+        navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата', 'Прайс', 'Отзывы', 'Контакты'],
         showActiveTooltip: true,
         dragAndMove: true,
-        anchors:['hero', 'about', 'order', 'payment', 'price'],
+        anchors:['hero', 'about', 'order', 'payment', 'price', 'testimonials', 'contacts'],
     })
 
     // Accordion
@@ -52,6 +52,41 @@ document.addEventListener('DOMContentLoaded', () => {
     let inputs = document.querySelectorAll('input[type="tel"]');
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(inputs);
+
+
+    // Yandex map
+    ymaps.ready(init);
+    var myMap,
+    myPlacemark1,
+    myPlacemark2;
+    function init(){
+        // Создание карты.
+            myMap = new ymaps.Map("map", {
+            center: [43.51583407764735,73.20454185556727],
+            zoom: 6
+        });
+
+        myMap.controls
+            .remove('trafficControl')
+            .remove('geolocationConrol')
+            .remove('searchControl')
+            .remove('typeSelector');
+
+        myMap.behaviors.disable([
+        'drag'
+        ]);
+
+        myPlacemark1 = new ymaps.Placemark([43.3410295745422,76.96583], {
+        balloonContentHeader: 'Филиал г. Алматы',
+        balloonContent: 'пр. Суюнбая, 152Г'
+        });
+        myPlacemark2 = new ymaps.Placemark([42.29497538416909,69.64130883600399], {
+        balloonContentHeader: 'Филиал г. Шымкент',
+        balloonContent: 'ул. Койкелди Батыра, 26'
+        });
+        myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);
+    };
+
 });
 
 

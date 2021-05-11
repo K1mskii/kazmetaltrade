@@ -5,6 +5,8 @@
     height: 100vh;
 }
 .about__wrapper {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -29,6 +31,7 @@
     color: rgba(255, 255, 255, 0.55);
 }
 .about__items {
+    z-index: 2;
     margin-top: 35px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

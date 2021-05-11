@@ -1,9 +1,19 @@
+.main {
+    position: relative;
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 80px;
     width: 100%;
 }
+#particles-js {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
 
 .title {
     font-family: 'MullerBold';

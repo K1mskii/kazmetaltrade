@@ -18,10 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
-        navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата'],
+        navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата', 'Прайс'],
         showActiveTooltip: true,
         dragAndMove: true,
-        anchors:['hero', 'about', 'order', 'payment'],
+        anchors:['hero', 'about', 'order', 'payment', 'price'],
     })
 });
+
+// Accordion
+function initAcc(elem, option){
+    document.addEventListener('click', function (e) {
+        if (!e.target.matches(elem+' .accordion__link')) return;
+        else{
+            if(!e.target.parentElement.classList.contains('active')){
+                if(option==true){
+                    let elementList = document.querySelectorAll(elem+' .accordion__item');
+                    Array.prototype.forEach.call(elementList, function (e) {
+                        e.classList.remove('active');
+                    });
+                }            
+                e.target.parentElement.classList.add('active');
+            }else{
+                e.target.parentElement.classList.remove('active');
+            }
+        }
+    });
+}
+initAcc('.accordion.v1', true);
 

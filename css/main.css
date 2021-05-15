@@ -196,7 +196,7 @@ button {
 }
 
 .btn {
-  padding: 20px 73px;
+  padding: 20px 30px;
   border: 2px solid #ffffff;
   font-family: 'MullerBold';
   font-weight: 700;
@@ -3141,7 +3141,7 @@ body._lock {
   font-size: 15px;
 }
 
-.modal__input {
+.modal__input, .modal__textarea {
   margin-bottom: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3156,6 +3156,8 @@ body._lock {
   line-height: 100%;
   letter-spacing: 0.05em;
   color: #ffffff;
+  outline: none;
+  resize: none;
 }
 
 .modal__submit {

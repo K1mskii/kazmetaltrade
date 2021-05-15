@@ -49,7 +49,7 @@
     @include m-light;
     font-size: 15px;
 }
-.modal__input {
+.modal__input, .modal__textarea {
     margin-bottom: 10px;
     box-sizing: border-box;
     padding: 15px;
@@ -61,6 +61,8 @@
     line-height: 100%;
     letter-spacing: 0.05em;
     color: $white;
+    outline: none;
+    resize: none;
 }
 .modal__submit {
     margin-top: 10px;

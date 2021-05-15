@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Закрытие меню при клике
     const menuLinks = document.querySelectorAll('.menu__link');
+    
     if(menuLinks.length > 0) {
         menuLinks.forEach(menuLink => {
             menuLink.addEventListener("click", onMenuLinkClick);
@@ -117,6 +118,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);
     };
+
+    // Modal window
+    let btns = document.querySelectorAll("*[data-modal-btn]");
+
+    for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {
+        let name = btns[i].getAttribute('data-modal-btn');
+        let modal = document.querySelector("[data-modal-window='"+name+"']");
+        modal.style.display = "block";
+        let close = modal.querySelector(".modal__close");
+        close.addEventListener('click', function() {
+        modal.style.display = "none";
+        })
+    })
+    }
+
+    window.onclick = function (e) {
+    if(e.target.hasAttribute('data-modal-window')) {
+        let modals = document.querySelectorAll("*[data-modal-window]");
+        for (let i = 0; i < modals.length; i++) {
+        modals[i].style.display = "none";
+        }
+    }
+    }
 });
 
 

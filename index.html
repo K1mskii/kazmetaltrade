@@ -29,7 +29,7 @@
                         <span class="menu__line"></span>
                         <ul class="menu__list" id="menu">
                             <li class="menu__item" data-menuanchor="about">
-                                <a href="#about" data-goto=".about"  class="menu__link">О компании</a>
+                                <a href="#about" data-goto=".about" class="menu__link">О компании</a>
                             </li>
                             <li class="menu__item" data-menuanchor="order">
                                 <a href="#order" data-goto=".order" class="menu__link">Как заказать</a>
@@ -68,7 +68,7 @@
                                 <p class="hero__desc">Мы принимаем лом чёрных и цветных металлов по Высоким ценам! <br>
                                     Оффициальная документация и моментальная выплата.
                                 </p>
-                                <button class="hero__btn btn">Заказать звонок</button>
+                                <button class="hero__btn btn" data-modal-btn="my_modal">Заказать звонок</button>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                     <p class="payment__desc">Оплата на рассчётный счёт для юридических лиц.</p>
                                 </li>
                             </ul>
-                            <button class="payment__btn btn">Оставить заявку</button>
+                            <button class="payment__btn btn" data-modal-btn="my_modal">Оставить заявку</button>
                         </div>
                         <form action="#" class="payment__form">
                             <div class="payment__body">
@@ -497,6 +497,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="modal" data-modal-window="my_modal">
+        <div class="modal__content">
+            <div class="modal__close">
+                <img src="img/icons/close.svg" alt="Закрыть" class="modal__icon">
+            </div>
+            <form action="#" class="modal__form">
+                <h2 class="modal__title">Нужна консультация?</h2>
+                <p class="modal__desc">Оставьте Ваши контакты и мы обязательно Вам перезвоним!</p>
+                <input type="text" class="modal__input" placeholder="Имя*">
+                <input type="tel" class="modal__input" id="phone-mask" placeholder="Номер телефона*">
+                <input type="text" class="modal__input" placeholder="Ваш город*">
+                <div class="modal__check">
+                    <input type="checkbox" class="modal__checkbox" id="checkbox" name="order_checkbox" onchange="document.getElementById('submit').disabled = !this.checked;" />
+                    <label for="checkbox">Я согласен с </label><a href="./privacy-policy.pdf" target="_blank">политикой конфиденциальности</a>
+                </div>
+                <input type="submit" value="Оставить заявку" id="submit" class="modal__submit" disabled="disabled" >
+            </form>
+        </div>
+    </div>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>

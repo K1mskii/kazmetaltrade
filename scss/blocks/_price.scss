@@ -161,8 +161,27 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 950px) { 
     .price__wrapper {
-        padding: 50px 0;
+        padding: 25px 0;
+    }
+}
+@media screen and (max-width: 600px) { 
+    .price__desc {
+        font-size: 15px;
+    }
+    .accordion__link {
+        font-size: 15px;
+        padding: 20px 15px;
+    }
+}
+@media screen and (max-width: 400px) { 
+    .price__desc {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 376px) { 
+    .price__title {
+        line-height: 100%;
     }
 }

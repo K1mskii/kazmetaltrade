@@ -7,6 +7,7 @@
     padding: 0 80px;
     width: 100%;
 }
+
 #particles-js {
     height: 100%;
     width: 100%;
@@ -60,7 +61,7 @@
         font-size: 15px;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .background {
         background: #232323;
     }
@@ -79,5 +80,23 @@
     .title {
         font-size: 30px;
         line-height: 140%;
+    }
+}
+@media screen and (max-width: 600px) { 
+    .container {
+        max-width: 550px;
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    .btn {
+        padding: 10px 15px;
+        text-transform: unset;
+    }
+}
+@media screen and (max-width: 400px) { 
+    .title {
+        text-align: center;
     }
 }

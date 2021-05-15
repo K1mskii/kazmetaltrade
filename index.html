@@ -29,22 +29,22 @@
                         <span class="menu__line"></span>
                         <ul class="menu__list" id="menu">
                             <li class="menu__item" data-menuanchor="about">
-                                <a href="#about"  class="menu__link">О компании</a>
+                                <a href="#about" data-goto=".about"  class="menu__link">О компании</a>
                             </li>
                             <li class="menu__item" data-menuanchor="order">
-                                <a href="#order" class="menu__link">Как заказать</a>
+                                <a href="#order" data-goto=".order" class="menu__link">Как заказать</a>
                             </li>
                             <li class="menu__item" data-menuanchor="payment">
-                                <a href="#payment" class="menu__link">Оплата</a>
+                                <a href="#payment" data-goto=".payment" class="menu__link">Оплата</a>
                             </li>
                             <li class="menu__item" data-menuanchor="price">
-                                <a href="#price" class="menu__link">Прайс</a>
+                                <a href="#price" data-goto=".price" class="menu__link">Прайс</a>
                             </li>
                             <li class="menu__item" data-menuanchor="testimonials">
-                                <a href="#testimonials" class="menu__link">Отзывы</a>
+                                <a href="#testimonials" data-goto=".testimonials" class="menu__link">Отзывы</a>
                             </li>
                             <li class="menu__item" data-menuanchor="contacts">
-                                <a href="#contacts" class="menu__link">Контакты</a>
+                                <a href="#contacts" data-goto=".contacts" class="menu__link">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -197,7 +197,7 @@
                         <form action="#" class="payment__form">
                             <div class="payment__body">
                                 <div class="payment__text">
-                                    <p class="toptitle">Есть вопросы?</p>
+                                    <p class="payment__toptitle">Есть вопросы?</p>
                                     <h2 class="payment__title">Оставьте заявку прямо сейчас</h2>
                                 </div>
                                 <input type="text" class="payment__input" placeholder="Имя">
@@ -488,10 +488,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__social">
-                <a href="#" class="footer__link">
+                <a href="https://www.facebook.com/too.kazmetaltrade.7" class="footer__link">
                     <img src="img/icons/fb.svg" alt="Facebook" class="footer__icon">
                 </a>
-                <a href="#" class="footer__link">
+                <a href="https://www.instagram.com/kazmetaltrade/" class="footer__link">
                     <img src="img/icons/insta.svg" alt="Instagram" class="footer__icon">
                 </a>
             </div>

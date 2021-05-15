@@ -48,9 +48,9 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .contacts__wrapper {
-        padding: 50px 0;
+        padding: 25px 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -59,4 +59,12 @@
         margin-top: 20px;
         height: 400px;
     } 
+}
+@media screen and (max-width: 450px) { 
+    .contacts__block {
+        padding-left: 40px;
+    }
+    .contacts__name, .contacts__link {
+        font-size: 15px;
+    }
 }

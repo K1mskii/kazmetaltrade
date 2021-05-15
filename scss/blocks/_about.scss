@@ -77,9 +77,9 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .about__wrapper {
-        padding: 50px 0;
+        padding: 25px 0;
     }
     .about__items {
         grid-template-columns: repeat(2, 1fr);
@@ -88,5 +88,13 @@
 @media screen and (max-width: 600px) { 
     .about__items {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 400px) { 
+    .about__toptitle {
+        display: none;
+    }
+    .about__subtitle {
+        text-align: center;        
     }
 }

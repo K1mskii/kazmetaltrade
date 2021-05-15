@@ -10,6 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    // Закрытие меню при клике
+    const menuLinks = document.querySelectorAll('.menu__link');
+    if(menuLinks.length > 0) {
+        menuLinks.forEach(menuLink => {
+            menuLink.addEventListener("click", onMenuLinkClick);
+        });
+
+        function onMenuLinkClick(e) {
+            const menuLink = e.target;
+            if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+                const gotoBlock = document.querySelector(menuLink.dataset.goto);
+                const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+
+                // Закрытие меню при клике X
+                if(iconMenu.classList.contains('_active')) {
+                    document.body.classList.remove('_lock');
+                    iconMenu.classList.remove('_active');
+                    menuBody.classList.remove('_active');
+                }
+
+                window.scrollTo({
+                    top: gotoBlockValue,
+                    behavior: "smooth"
+                });
+                e.preventDefault();
+            }
+        }
+    }
 
     // Slider section
     new fullpage('#fullpage', {
@@ -20,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dragAndMove: true,
         anchors:['hero', 'about', 'order', 'payment', 'price', 'testimonials', 'contacts'],
         normalScrollElements: '.accordion__block, .contacts__map',
-        responsiveWidth: 901,
+        responsiveWidth: 951,
         
     })
 
@@ -89,7 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);
     };
-
 });
 
 
+// Header Scroll BG
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    header.classList.toggle('scrolled', window.scrollY > 0);
+})

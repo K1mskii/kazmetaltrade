@@ -73,13 +73,30 @@
     letter-spacing: .5px;
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 950px) { 
     .testimonials__wrapper {
-        padding: 50px 0;
+        padding: 25px 0;
     }
 }
 @media screen and (max-width: 700px) { 
     .testimonials__items{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 670px) { 
+    .testimonials__desc {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .testimonials__btn {
+        padding: 12px 15px;
+    }
+}
+@media screen and (max-width: 310px) { 
+    .testimonials__row {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }

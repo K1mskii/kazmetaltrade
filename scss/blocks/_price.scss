@@ -32,7 +32,7 @@
     font-weight: 400;
     display: block;
     font-weight: 500;
-    background-color: #232323;
+    background-color: $dark;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
@@ -135,7 +135,7 @@
 }
 .price__th {
     @include m-bold;
-    background-color: #232323;
+    background-color: $dark;
     color: $white;
 }
 .price__td {

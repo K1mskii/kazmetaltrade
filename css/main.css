@@ -1295,7 +1295,7 @@ body._lock {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.4;
 }
 
@@ -1616,7 +1616,6 @@ body._lock {
   color: #ffffff;
   background: #232323;
   border-radius: 5px;
-  background-color: #232323;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;

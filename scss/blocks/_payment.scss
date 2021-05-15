@@ -34,7 +34,7 @@
     max-width: 420px;
     position: relative;
     padding: 70px 35px;
-    background: #232323;
+    background: $dark;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 }
 .payment__body {
@@ -92,7 +92,7 @@
     font-size: 12px;
     line-height: 140%;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: $white;
     opacity: 0.4;
 }
 

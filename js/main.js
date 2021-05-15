@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showActiveTooltip: true,
         dragAndMove: true,
         anchors:['hero', 'about', 'order', 'payment', 'price', 'testimonials', 'contacts'],
+        normalScrollElements: '.accordion__block, .contacts__map',
+        responsiveWidth: 901,
+        
     })
 
     // Accordion
@@ -72,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .remove('searchControl')
             .remove('typeSelector');
 
-        myMap.behaviors.disable([
-        'drag'
-        ]);
+        // myMap.behaviors.disable([
+        // 'drag'
+        // ]);
 
         myPlacemark1 = new ymaps.Placemark([43.3410295745422,76.96583], {
         balloonContentHeader: 'Филиал г. Алматы',

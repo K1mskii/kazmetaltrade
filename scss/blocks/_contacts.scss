@@ -1,9 +1,3 @@
-.contacts {
-    position: relative;
-    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
-    width: 100%;
-    height: 100vh;
-}
 .contacts__wrapper {
     position: relative;
     z-index: 2;
@@ -12,6 +6,7 @@
     grid-gap: 30px;
 }
 .contacts__map {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
     width: 100%;
     height: 100%;
 }
@@ -51,4 +46,16 @@
     background: url(../img/icons/email.svg);
     background-position: left center;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 900px) {
+    .contacts__wrapper {
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .contacts__map {
+        height: 400px;
+    } 
 }

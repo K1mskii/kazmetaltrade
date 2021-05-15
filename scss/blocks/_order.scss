@@ -1,9 +1,3 @@
-.order {
-    position: relative;
-    background: linear-gradient(112.21deg, #1F1F1F 2.72%, #121212 101.59%);
-    width: 100%;
-    height: 100vh;
-}
 .order__wrapper {
     position: relative;
     z-index: 2;
@@ -13,9 +7,9 @@
     flex-wrap: wrap;
 }
 .order__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
 }
 .order__city {
     margin-top: 35px;
@@ -35,12 +29,16 @@
     margin-bottom: 20px;
     list-style: disc;
     @include m-light;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
 }
 .order__item a {
-    border-bottom: 1px solid $white;
+    text-decoration: underline;
 }
+.order__item a:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
 
 // Map
 .order__map {
@@ -65,4 +63,31 @@
     transition: opacity .2s ease;
     opacity: .6;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) { 
+    .order__item {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .order__lists {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .order__wrapper {
+        padding: 50px 0;
+    } 
+    .order__inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .order__map {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) { 
+    .order__map {
+        display: none;
+    }
 }

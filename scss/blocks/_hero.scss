@@ -16,19 +16,16 @@
     position: relative;
     z-index: 2;
     padding-top: 332px;
+    padding-bottom: 332px;
 }
 .hero__text {
     max-width: 943px;
 }
 .hero__title {
-    @include m-bold;
-    font-size: 60px;
-    line-height: 100%;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 .hero__desc {
-    margin-top: 24px;
+    margin-top: 20px;
     @include m-ultra;
     font-size: 20px;
     line-height: 140%;
@@ -36,18 +33,21 @@
     color: $white;
 }
 .hero__btn {
-    margin-top: 27px;
+    margin-top: 20px;
 }
-.btn {
-    padding: 20px 73px;
-    border: 2px solid $white;
-    @include m-bold;
-    background: none;
-    font-size: 20px;
-    line-height: 100%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: $white;
-    cursor: pointer;
+
+@media screen and (max-width: 900px) { 
+    .hero__wrapper {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .hero__desc {
+        font-size: 17px;
+    }
 }
+@media screen and (max-width: 670px) { 
+    .hero__text {
+        text-align: center;
+    }
+}
+

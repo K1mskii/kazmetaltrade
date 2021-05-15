@@ -30,12 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     iconMenu.classList.remove('_active');
                     menuBody.classList.remove('_active');
                 }
-
-                window.scrollTo({
-                    top: gotoBlockValue,
-                    behavior: "smooth"
-                });
-                e.preventDefault();
             }
         }
     }

@@ -71,10 +71,55 @@ document.addEventListener('DOMContentLoaded', () => {
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(inputs);
 
+    // Modal window
+    let btns = document.querySelectorAll("*[data-modal-btn]");
 
-    // Yandex map
+    for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {
+        let name = btns[i].getAttribute('data-modal-btn');
+        let modal = document.querySelector("[data-modal-window='"+name+"']");
+        modal.style.display = "block";
+        let close = modal.querySelector(".modal__close");
+        close.addEventListener('click', function() {
+        modal.style.display = "none";
+        })
+    })
+    }
+    window.onclick = function (e) {
+    if(e.target.hasAttribute('data-modal-window')) {
+        let modals = document.querySelectorAll("*[data-modal-window]");
+        for (let i = 0; i < modals.length; i++) {
+        modals[i].style.display = "none";
+        }
+    }
+    }
+
+    // Запускаем функцию при прокрутке страницы
+    window.addEventListener('scroll', function() {
+        Visible (map);
+    });
+        // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+        Visible (map);
+});
+
+
+// Header Scroll BG
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    header.classList.toggle('scrolled', window.scrollY > 0);
+})
+
+// Yandex Map
+setTimeout(function(){
+    let elem = document.createElement('script');
+    elem.type = 'text/javascript';
+    elem.src = '//api-maps.yandex.ru/2.1/?load=package.standard&lang=ru-RU&onload=getYaMap';
+    document.getElementsByTagName('body')[0].appendChild(elem);
+}, 2000);
+
+function getYaMap(){
     ymaps.ready(init);
-    var myMap,
+    let myMap,
     myPlacemark1,
     myPlacemark2;
     function init(){
@@ -104,35 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);
     };
-
-    // Modal window
-    let btns = document.querySelectorAll("*[data-modal-btn]");
-
-    for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function() {
-        let name = btns[i].getAttribute('data-modal-btn');
-        let modal = document.querySelector("[data-modal-window='"+name+"']");
-        modal.style.display = "block";
-        let close = modal.querySelector(".modal__close");
-        close.addEventListener('click', function() {
-        modal.style.display = "none";
-        })
-    })
-    }
-
-    window.onclick = function (e) {
-    if(e.target.hasAttribute('data-modal-window')) {
-        let modals = document.querySelectorAll("*[data-modal-window]");
-        for (let i = 0; i < modals.length; i++) {
-        modals[i].style.display = "none";
-        }
-    }
-    }
-});
-
-
-// Header Scroll BG
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    header.classList.toggle('scrolled', window.scrollY > 0);
-})
+}

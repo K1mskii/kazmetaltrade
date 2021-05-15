@@ -46,11 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: true,
         navigationTooltips: ['Главная', 'О компании', 'Как заказать', 'Оплата', 'Прайс', 'Отзывы', 'Контакты'],
         showActiveTooltip: true,
-        dragAndMove: true,
         anchors:['hero', 'about', 'order', 'payment', 'price', 'testimonials', 'contacts'],
         normalScrollElements: '.accordion__block, .contacts__map',
         responsiveWidth: 951,
-        
     })
 
     // Accordion
@@ -73,12 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     initAcc('.accordion.v1', true);
-
-    // AOS animation
-    AOS.init({
-        disable: 'phone',
-        duration: 1200
-    });
 
     // inputMask
     let inputs = document.querySelectorAll('input[type="tel"]');

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: https://kazmetaltrade.kz/
+Sitemap: https://kazmetaltrade.kz/sitemap.xml

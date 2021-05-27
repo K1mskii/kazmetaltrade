@@ -36,6 +36,20 @@
     margin-top: 20px;
 }
 
+@media screen and (max-height: 900px) {
+    .hero__wrapper {
+        padding: calc(100% - 80%) 0;
+    } 
+}
+@media screen and (max-height: 600px) {
+    .hero__title {
+        font-size: 40px;
+    }
+    .hero__desc {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 950px) { 
     .hero__wrapper {
         padding-top: 200px;

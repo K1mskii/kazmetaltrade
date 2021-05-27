@@ -1,0 +1,52 @@
+// Price for instagram story
+.storyPrice {
+    margin: 5rem 10px;
+    background: url(../img/story-price.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include m-light;
+    font-size: 15px;
+    color: $white;
+  }
+  
+  .storyPrice__th {
+    color: $white;
+    text-align: center;
+    @include m-regular;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+  }
+  
+  .storyPrice__td {
+    color: $white;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+  }
+  
+  .storyPrice__td:nth-child(2),
+  .storyPrice__td:nth-child(3) {
+    text-align: center;
+  }
+  
+  .storyPrice__th:nth-child(3) {
+    text-align: center;
+  }
+  
+  .storyPrice__date {
+    color: $white;
+    padding: 10px;
+  }
+  
+  @media screen and (max-width: 425px) {
+    .storyPrice__th {
+      padding: 5px 7px;
+    }
+  
+    .storyPrice__td {
+      padding: 5px 7px;
+    }
+  
+    .storyPrice__date {
+      padding: 10px;
+    }
+  }

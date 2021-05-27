@@ -77,6 +77,12 @@
     }
 }
 
+@media screen and (max-height: 900px) {
+    .about__wrapper {
+        padding: 50px 0;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .about__wrapper {
         padding: 25px 0;

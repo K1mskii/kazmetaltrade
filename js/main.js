@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchors:['hero', 'about', 'order', 'payment', 'price', 'testimonials', 'contacts'],
         normalScrollElements: '.accordion__block, .contacts__map',
         responsiveWidth: 951,
+        responsiveHeight: 901
     })
 
     // Accordion

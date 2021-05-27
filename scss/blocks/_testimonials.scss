@@ -72,6 +72,12 @@
     letter-spacing: .5px;
 }
 
+@media screen and (max-height: 900px) {
+    .testimonials__wrapper {
+        padding: 50px 0;
+    }
+}
+
 @media screen and (max-width: 950px) { 
     .testimonials__wrapper {
         padding: 25px 0;
@@ -91,6 +97,16 @@
 @media screen and (max-width: 500px) {
     .testimonials__btn {
         padding: 12px 15px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .testimonials__desc {
+        line-height: 150%;
+    }
+}
+@media screen and (max-width: 330px) { 
+    .testimonials__desc {
+        text-align: center;
     }
 }
 @media screen and (max-width: 310px) { 

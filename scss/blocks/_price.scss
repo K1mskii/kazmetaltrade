@@ -90,8 +90,8 @@
 // Price table
 .price__info {
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     color: $white;
 }
 .price__date {
@@ -99,7 +99,6 @@
     font-size: 15px;
 }
 .price__date b {
-    font-weight: bold;
     text-decoration: underline
 }
 .price__name {
@@ -166,6 +165,13 @@
         padding: 25px 0;
     }
 }
+
+@media screen and (max-height: 900px) {
+    .price__wrapper {
+        padding: 50px 0;
+    }
+}
+
 @media screen and (max-width: 600px) { 
     .price__desc {
         font-size: 15px;
@@ -183,5 +189,16 @@
 @media screen and (max-width: 376px) { 
     .price__title {
         line-height: 100%;
+    }
+}
+@media screen and (max-width: 350px) { 
+    .price__info {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .price__manager {
+        margin-top: 20px;
+    }
+    .price__th, .price__td {
+        font-size: 15px;
     }
 }

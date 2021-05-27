@@ -61,6 +61,11 @@
         font-size: 15px;
     }
 }
+@media screen and (max-height: 900px) { 
+    .background {
+        background: #232323;
+    }
+}
 @media screen and (max-width: 950px) {
     .background {
         background: #232323;
@@ -74,6 +79,11 @@
         font-family: 'MullerLight';
         font-weight: 300;
         font-style: normal;
+    }
+}
+@media screen and (max-width: 768px) { 
+    #particles-js {
+        display: none;
     }
 }
 @media screen and (max-width: 670px) {
